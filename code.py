@@ -44,7 +44,7 @@ for i in range(13):
                     else:
                         urls_rest.append(i)
     [temp_rest.append(x) for x in urls_rest if x not in temp_rest]
-    for i in temp_rest:
+    for i in temp:
         if i=='https://online.datasciencedojo.com/blogs/':
             None
         else:
@@ -72,7 +72,7 @@ stop_words = set(stopwords.words("english"))
 descrip=[]
 # des_temp=np.array(des_temp)
 # print(des_temp)
-for i in des_temp:
+for i in descrip_temp:
     for j in i:
         text = re.sub("@\S+", "", j)
         text = re.sub(r'[^\w\s]', '', text)
